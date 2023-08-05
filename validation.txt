@@ -1,0 +1,47 @@
+====================================================validation===================================
+Name:/[A-Z][a-zA-Z][^#&<>\"~;$^%{}?]{1,20}$/
+userName:/[a-zA-Z\u0621-\u064Aء-ئ][^#&<>\"~;$^%{}?]{1,20}$/    يقبل عربي  وانجليزي
+password:/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/
+phoneNumberEgypt=> /^01[0125][0-9]{8}$/
+==================================================== sending Email  =================================   
+ const code = Math.floor(Math.random() * (9999 - 1000 + 1) + 1000)
+
+1- approve less sequre apps
+  let transporter = nodemailer.createTransport({
+                service: 'gmail',
+                port: process.env.PORT || 587,
+                secure: false, // true for 465, false for other ports
+                auth: {
+                    user: 'hostEmail', // generated ethereal user
+                    pass: 'hostPassword', // generated ethereal password
+                },
+            });
+            let info = await transporter.sendMail({
+                from: 'hostEmail', // sender address
+                to: req.body.email, // list of receivers email
+                subject: "Hello ✔", // Subject line
+                text: "Hello world?", // plain text body
+                html: "<b>Hello world?</b>", // html body
+            });
+senderEmail=routesession11@gmail.com
+senderPassword = 1478530123
+=================================get full url ================================================
+FullURL => req.protocol + '://' + req.headers.host + '/DisplayProfile/' + req.userID
+=====================================================================================================
+
+uploadServer
+ 1- port = process.env.PORT 
+2-packageJson
+2.1"main": "app.js",
+2.2 "scripts": {
+    "start": "node app.js"
+  },
+2.3  "engines": {
+    "node":"16.14.0"
+  },
+
+//online mongo
+mongodb+srv://MahmoudElwan:<password>@mahmoudelwan-nodejs.jfspq.mongodb.net/DBName
+
+
+https://www.glassdoor.com/Job/cairo-german-jobs-SRCH_IL.0,5_IC3438985_KO6,12.htm
